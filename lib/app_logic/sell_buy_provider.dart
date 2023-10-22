@@ -1,52 +1,67 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
+import 'package:trade/services/app_services/buy_sell_service.dart';
 
 class _BuySellProviderState {
-  int investment = 1000;
-  int balance = 10000;
-  _BuySellProviderState();
+  int investment;
+  int balance;
+  _BuySellProviderState({
+    required this.investment,
+    required this.balance,
+  });
 }
 
 class BuySellProvider extends ChangeNotifier {
   // ignore: prefer_final_fields
-  var _state = _BuySellProviderState();
+  var _state = _BuySellProviderState(investment: 1000, balance: 10000);
   // ignore: library_private_types_in_public_api
   _BuySellProviderState get state => _state;
+  final _buySellService = BuySellService();
 
   Future<void> onIncrementButtonPressed() async {
-    _state.investment += 1000;
-    notifyListeners();
+    _buySellService.onIncrementButtonPressed();
+    _updateState();
   }
 
   Future<void> onDecrementButtonPressed() async {
-    _state.investment -= 1000;
-    notifyListeners();
+    _buySellService.onDecrementButtonPressed();
+    _updateState();
   }
 
   void addToBalance() {
-    _state.balance += _state.investment;
-    notifyListeners();
+    _buySellService.addToBalance();
+    _updateState();
   }
 
   void minusBalance() {
-    _state.balance -= _state.investment;
-    notifyListeners();
+    _buySellService.minusBalance();
+    _updateState();
   }
 
   Future<void> onValueChanged(String value) async {
-    final investment = int.parse(value);
-    _state.investment = investment;
-    notifyListeners();
+    _buySellService.onValueChanged(value);
+    _updateState();
   }
 
   String formatNumber() {
-    final formatter = NumberFormat('#,###');
-    return formatter.format(_state.investment);
+    return _buySellService.formatNumber();
     // Return the original input if it's not a valid number.
   }
 
   String formatBalance() {
-    final formatter = NumberFormat('###,###');
-    return formatter.format(_state.balance);
+    return _buySellService.formatBalance();
+  }
+
+  void _updateState() {
+    final model = _buySellService.model;
+    _state = _BuySellProviderState(
+      investment: model.investment,
+      balance: model.balance,
+    );
+    notifyListeners();
   }
 }
+
+
