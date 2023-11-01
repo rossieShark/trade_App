@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:trade/app_logic/coins_provider.dart';
+import 'package:trade/navigation/go_router.dart';
 import 'package:trade/screens/currency_pair_screen.dart/currency_pair.dart';
 import 'package:trade/resources/resources.dart';
 import 'package:trade/services/ui_services/app_colors.dart';
@@ -57,10 +59,11 @@ class _ArrowIconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          PageRouteAnimation(page: const CurrencyPairsScreen())
-              .createPageRoute(),
-        );
+        GoRouter.of(context).go('/' + routeNameMap[RouteName.currencyPair]!);
+        // Navigator.of(context).push(
+        //   PageRouteAnimation(page: const CurrencyPairsScreen())
+        //       .createPageRoute(),
+        // );
       },
       child: Image.asset(
         width: 24,

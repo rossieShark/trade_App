@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:trade/appData/app_data.dart';
 import 'package:trade/app_logic/coins_provider.dart';
@@ -95,9 +96,7 @@ class CurrencyPairCard extends StatelessWidget {
 
   void onTap(BuildContext context) {
     context.read<CoinsProvider>().setCoinsPair(AppData().currencyPairs[index]);
-    Navigator.of(context).pop(
-      PageRouteAnimation(page: const TradeScreen()).createPageRoute(),
-    );
+    Navigator.of(context).pop();
   }
 }
 
@@ -134,8 +133,7 @@ class AppBarWidget extends StatelessWidget {
   }
 
   void onGoToPreviousPageButton(BuildContext context) {
-    Navigator.of(context).pop(
-      PageRouteAnimation(page: const TradeScreen()).createPageRoute(),
-    );
+    context.pop();
+    // Navigator.of(context).pop();
   }
 }

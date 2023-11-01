@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:trade/app_logic/sell_buy_provider.dart';
+import 'package:trade/navigation/go_router.dart';
 import 'package:trade/screens/bottom_bar.dart';
 import 'package:trade/app_logic/coins_provider.dart';
 
@@ -34,8 +35,8 @@ class TradingApp extends StatelessWidget {
           create: (context) => TradersModel(),
         ),
       ],
-      child: const MaterialApp(
-        home: BottomBarNavigation(),
+      child: MaterialApp.router(
+        routerConfig: router,
       ),
     );
   }
