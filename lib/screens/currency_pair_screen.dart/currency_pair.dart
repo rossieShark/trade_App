@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/appData/app_data.dart';
-import 'package:trade/app_logic/coins_provider.dart';
-import 'package:trade/resources/resources.dart';
-import 'package:trade/screens/trade_screen.dart/trade_scren_main.dart';
-import 'package:trade/services/ui_services/app_colors.dart';
 
-import 'package:trade/widgets/custom_app_bar.dart';
-import 'package:trade/widgets/custom_container.dart';
-import 'package:trade/widgets/page_route_animation.dart';
+import 'package:trade/appData/app_data.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/resources/resources.dart';
+import 'package:trade/services/services_index.dart';
+import 'package:trade/widgets/widgets_index.dart';
 
 class CurrencyPairsScreen extends StatelessWidget {
   const CurrencyPairsScreen({super.key});
@@ -134,6 +129,5 @@ class AppBarWidget extends StatelessWidget {
 
   void onGoToPreviousPageButton(BuildContext context) {
     context.pop();
-    // Navigator.of(context).pop();
   }
 }

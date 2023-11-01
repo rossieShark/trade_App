@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-
 import 'package:trade/resources/resources.dart';
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/widgets/custom_container.dart';
-import 'package:trade/widgets/custom_text_field.dart';
+import 'package:trade/services/services_index.dart';
+
+import 'package:trade/widgets/widgets_index.dart';
 
 class CustomManageButtons extends StatelessWidget {
   final String text;

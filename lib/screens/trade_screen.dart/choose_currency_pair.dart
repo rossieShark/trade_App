@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/app_logic/coins_provider.dart';
-import 'package:trade/navigation/go_router.dart';
-import 'package:trade/screens/currency_pair_screen.dart/currency_pair.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
 import 'package:trade/resources/resources.dart';
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/widgets/custom_container.dart';
-import 'package:trade/widgets/page_route_animation.dart';
+import 'package:trade/services/services_index.dart';
+import 'package:trade/widgets/widgets_index.dart';
 
 class ChooseCoinsPairWidget extends StatelessWidget {
   const ChooseCoinsPairWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // final coinsPair = context.watch<CoinsProvider>().coinsPait;
     return const CustomContainer(
       child: Stack(
         fit: StackFit.expand,
@@ -59,11 +53,7 @@ class _ArrowIconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).go('/' + routeNameMap[RouteName.currencyPair]!);
-        // Navigator.of(context).push(
-        //   PageRouteAnimation(page: const CurrencyPairsScreen())
-        //       .createPageRoute(),
-        // );
+        GoRouter.of(context).go('/${routeNameMap[RouteName.currencyPair]!}');
       },
       child: Image.asset(
         width: 24,

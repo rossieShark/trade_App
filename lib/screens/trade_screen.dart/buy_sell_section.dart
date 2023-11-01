@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/app_logic/sell_buy_provider.dart';
-import 'package:trade/widgets/custom_manage_buttons.dart';
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/app_logic/timer_provider.dart';
-import 'package:trade/widgets/container_buttons.dart';
-import 'package:trade/widgets/custom_alert.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/services/services_index.dart';
+
+import 'package:trade/widgets/widgets_index.dart';
 
 class BuySellSection extends StatelessWidget {
   const BuySellSection({

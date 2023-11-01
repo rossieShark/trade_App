@@ -1,9 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:trade/app_logic/coins_provider.dart';
-import 'package:trade/app_logic/sell_buy_provider.dart';
-
-import 'package:trade/app_logic/timer_provider.dart';
-import 'package:trade/screens/top_traders_screen.dart/top_traders.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/screens/screens_index.dart';
 
 class SetGetItDependencies {
   void setupProviderDependencies() {

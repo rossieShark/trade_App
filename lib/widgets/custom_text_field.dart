@@ -1,10 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/app_logic/sell_buy_provider.dart';
 
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/app_logic/timer_provider.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/services/services_index.dart';
 
 class CustomTextField extends StatefulWidget {
   const CustomTextField({
@@ -19,8 +17,6 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  // late final MaskedTextController _controller =
-  //     MaskedTextController(mask: widget.mask);
   late final TextEditingController _controller = TextEditingController();
 
   @override
@@ -78,8 +74,6 @@ class TimerTextField extends StatefulWidget {
 }
 
 class _TimerTextFieldState extends State<TimerTextField> {
-  // late final MaskedTextController _controller =
-  //     MaskedTextController(mask: widget.mask);
   late final TextEditingController _controller = TextEditingController();
 
   @override

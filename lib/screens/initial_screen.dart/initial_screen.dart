@@ -1,19 +1,18 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:trade/screens/screens_index.dart';
 
-import 'package:trade/screens/initial_screen.dart/progress_indicator.dart';
+import 'package:trade/services/services_index.dart';
 
-import 'package:trade/services/ui_services/app_colors.dart';
-
-class FrostedDemo extends StatefulWidget {
-  const FrostedDemo({super.key});
+class InitialPage extends StatefulWidget {
+  const InitialPage({super.key});
 
   @override
-  State<FrostedDemo> createState() => _FrostedDemoState();
+  State<InitialPage> createState() => _InitialPageState();
 }
 
-class _FrostedDemoState extends State<FrostedDemo> {
+class _InitialPageState extends State<InitialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +51,8 @@ class _ProgressIndicatorWidget extends StatelessWidget {
       child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 90.0, sigmaY: 90.0),
           child: const Align(
-              alignment: Alignment.center, child: ProgressIndicatorExample())),
+              alignment: Alignment.center,
+              child: LinearProgressIndicatorWidget())),
     );
   }
 }

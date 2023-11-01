@@ -1,11 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'dart:async';
-
-
 import 'package:flutter/widgets.dart';
-
-import 'package:trade/services/app_services/timer_service.dart';
+import 'package:trade/services/services_index.dart';
 
 class _TimerProviderState {
   int timer;
@@ -13,7 +10,6 @@ class _TimerProviderState {
 }
 
 class TimerProvider extends ChangeNotifier {
-  // final _userService = UserService();
   final _timerService = TimerService();
   // ignore: prefer_final_fields
   var _state = _TimerProviderState(timer: 0);
@@ -22,19 +18,16 @@ class TimerProvider extends ChangeNotifier {
   Future<void> onIncrementButtonPressed() async {
     _timerService.incrementValue();
     _updateState();
- 
   }
 
   Future<void> onDecrementButtonPressed() async {
     _timerService.decrementValue();
     _updateState();
-
   }
 
   Future<void> onValueChanged(String value) async {
     _timerService.onValueChanged(value);
     _updateState();
- 
   }
 
   String get formattedTime {
@@ -66,5 +59,3 @@ class TimerProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-
-

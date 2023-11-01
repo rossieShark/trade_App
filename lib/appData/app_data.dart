@@ -1,4 +1,4 @@
-import 'package:trade/models/top_traders.model.dart';
+import 'package:trade/models/models_index.dart';
 import 'package:trade/resources/resources.dart';
 
 class AppData {

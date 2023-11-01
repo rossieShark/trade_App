@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:trade/navigation/go_router.dart';
+
 import 'package:trade/resources/resources.dart';
-import 'package:trade/screens/trade_screen.dart/trade_scren_main.dart';
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/screens/top_traders_screen.dart/top_traders.dart';
+import 'package:trade/services/services_index.dart';
 
 class BottomBarNavigation extends StatefulWidget {
   final Widget child;
@@ -29,7 +26,6 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
         backgroundColor: AppColors.tabBarBottomColor,
         selectedItemColor: AppColors.green,
         unselectedItemColor: AppColors.grey,
-    
         selectedLabelStyle: GoogleFonts.nunitoSans(
           textStyle: const TextStyle(
             fontSize: 10,

@@ -1,16 +1,13 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:trade/appData/app_data.dart';
-import 'package:trade/models/top_traders.model.dart';
-
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/widgets/custom_app_bar.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/models/models_index.dart';
+import 'package:trade/services/services_index.dart';
 import 'dart:math';
-
 import 'dart:async';
+import 'package:trade/widgets/widgets_index.dart';
 
 class _TradersModelState {
   List<TopTraders> topTraders = AppData().topTraders;
@@ -18,8 +15,6 @@ class _TradersModelState {
 }
 
 class TradersModel extends ChangeNotifier {
-  // final _userService = UserService();
-
   // ignore: prefer_final_fields
   var _state = _TradersModelState();
   _TradersModelState get state => _state;

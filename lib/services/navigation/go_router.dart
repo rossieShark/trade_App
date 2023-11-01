@@ -1,10 +1,7 @@
 import 'package:flutter/cupertino.dart';
-
 import 'package:go_router/go_router.dart';
-import 'package:trade/screens/bottom_bar.dart';
-import 'package:trade/screens/currency_pair_screen.dart/currency_pair.dart';
-import 'package:trade/screens/top_traders_screen.dart/top_traders.dart';
-import 'package:trade/screens/trade_screen.dart/trade_scren_main.dart';
+
+import 'package:trade/screens/screens_index.dart';
 import 'package:trade/widgets/page_route_animation.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -44,7 +41,6 @@ final router = GoRouter(
 
 class NavigationUtils {
   static void mobileHandleTabTap(BuildContext context, int index) {
-
     switch (index) {
       case 0:
         context.go(routeNameMap[RouteName.trade]!);

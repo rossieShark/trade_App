@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:trade/main.dart';
+import 'package:trade/services/services_index.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-import 'package:trade/screens/trade_screen.dart/trade_scren_main.dart';
-
-class ProgressIndicatorExample extends StatefulWidget {
-  const ProgressIndicatorExample({super.key});
+class LinearProgressIndicatorWidget extends StatefulWidget {
+  const LinearProgressIndicatorWidget({super.key});
 
   @override
-  State<ProgressIndicatorExample> createState() =>
-      _ProgressIndicatorExampleState();
+  State<LinearProgressIndicatorWidget> createState() =>
+      _LinearProgressIndicatorWidgetState();
 }
 
-class _ProgressIndicatorExampleState extends State<ProgressIndicatorExample>
-    with TickerProviderStateMixin {
+class _LinearProgressIndicatorWidgetState
+    extends State<LinearProgressIndicatorWidget> with TickerProviderStateMixin {
   late AnimationController controller;
 
   @override
@@ -32,7 +31,7 @@ class _ProgressIndicatorExampleState extends State<ProgressIndicatorExample>
     if (controller.value == 1.0) {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => const TradeScreen(),
+          builder: (context) => const TradingApp(),
         ),
       );
     }

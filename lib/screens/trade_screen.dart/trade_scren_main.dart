@@ -1,15 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/app_logic/coins_provider.dart';
-
-import 'package:trade/screens/trade_screen.dart/balance_widget.dart';
-import 'package:trade/screens/trade_screen.dart/buy_sell_section.dart';
-import 'package:trade/screens/trade_screen.dart/choose_currency_pair.dart';
-import 'package:trade/screens/trade_screen.dart/trade_web_view.dart';
-import 'package:trade/services/text_modifier/text_modifier_service.dart';
-import 'package:trade/widgets/custom_app_bar.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
 import 'package:trade/appData/app_data.dart';
+import 'package:trade/screens/screens_index.dart';
+import 'package:trade/services/services_index.dart';
+import 'package:trade/widgets/widgets_index.dart';
 
 class TradeScreen extends StatelessWidget {
   const TradeScreen({Key? key}) : super(key: key);

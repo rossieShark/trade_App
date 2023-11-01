@@ -1,7 +1,5 @@
-
 import 'dart:math';
-
-import 'package:trade/models/timer_model.dart';
+import 'package:trade/models/models_index.dart';
 
 class TimerService {
   var _timer = TimerModel(timer: 1);
@@ -9,15 +7,11 @@ class TimerService {
 
   void incrementValue() {
     _timer = timer.copyWith(timer: timer.timer + 1);
-
   }
 
   void decrementValue() {
     _timer = timer.copyWith(timer: max(timer.timer - 1, 0));
- 
   }
-
-
 
   void onValueChanged(String value) {
     _timer = timer.copyWith(timer: int.parse(value));

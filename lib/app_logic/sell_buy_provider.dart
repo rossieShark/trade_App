@@ -1,8 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
-
-import 'package:trade/services/app_services/buy_sell_service.dart';
+import 'package:trade/services/services_index.dart';
 
 class _BuySellProviderState {
   int investment;
@@ -47,7 +46,6 @@ class BuySellProvider extends ChangeNotifier {
 
   String formatNumber() {
     return _buySellService.formatNumber();
-    // Return the original input if it's not a valid number.
   }
 
   String formatBalance() {
@@ -63,5 +61,3 @@ class BuySellProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-
-

@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/app_logic/sell_buy_provider.dart';
-import 'package:trade/navigation/go_router.dart';
-import 'package:trade/screens/bottom_bar.dart';
-import 'package:trade/app_logic/coins_provider.dart';
-
-import 'package:trade/screens/top_traders_screen.dart/top_traders.dart';
-
-import 'package:trade/app_logic/timer_provider.dart';
-import 'package:trade/services/helper/get_it.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/screens/screens_index.dart';
+import 'package:trade/services/services_index.dart';
 
 void main() {
   SetGetItDependencies().setupProviderDependencies;
-  runApp(const MaterialApp(home: TradingApp()));
+  runApp(const MaterialApp(home: InitialPage()));
 }
 
 class TradingApp extends StatelessWidget {

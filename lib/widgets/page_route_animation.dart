@@ -60,8 +60,8 @@ class _PageRouteAnimationState extends State<PageRouteAnimation>
     );
 
     animation = Tween<Offset>(
-      begin: Offset(1.0, 0.0),
-      end: Offset(0.0, 0.0),
+      begin: const Offset(1.0, 0.0),
+      end: const Offset(0.0, 0.0),
     ).animate(curvedAnimation);
 
     animationController.forward();
@@ -69,7 +69,7 @@ class _PageRouteAnimationState extends State<PageRouteAnimation>
 
   @override
   void dispose() {
-    animationController.dispose(); // Don't forget to dispose the controller
+    animationController.dispose();
     super.dispose();
   }
 

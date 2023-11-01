@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:trade/app_logic/sell_buy_provider.dart';
-import 'package:trade/services/ui_services/app_colors.dart';
-import 'package:trade/widgets/custom_container.dart';
+import 'package:trade/app_logic/app_logic_index.dart';
+import 'package:trade/services/services_index.dart';
+import 'package:trade/widgets/widgets_index.dart';
 
 class BalanceWidget extends StatelessWidget {
   const BalanceWidget({super.key});
